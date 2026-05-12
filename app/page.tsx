@@ -4,10 +4,9 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeaturedWorks from '../components/FeaturedWorks';
 import Services from '../components/Services';
-import Testimonials from '../components/Testimonials';
-import Pricing from '../components/Pricing';
+import UserExperience from '../components/Experience';
 import Articles from '../components/Articles';
-import FAQ from '../components/FAQ';
+import UserFAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 
 export default function Page() {
@@ -18,10 +17,9 @@ export default function Page() {
         <Hero />
         <FeaturedWorks />
         <Services />
-        <Testimonials />
-        <Pricing />
+        <UserExperience />
         <Articles />
-        <FAQ />
+        <UserFAQ />
       </main>
       <Footer />
     </div>
