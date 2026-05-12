@@ -29,7 +29,7 @@ export default function Hero() {
               <a href="https://www.linkedin.com/in/muhammad-raihan-maulana-a05a2823a/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors">
                 <FaLinkedin size={24} />
               </a>
-              <a href="https://maulrai.bio" className="px-6 py-3 border border-white/20 text-[10px] tracking-[0.2em] font-bold hover:bg-white hover:text-black cursor-pointer transition-colors uppercase">
+              <a href="/CV_Muhammad_Raihan_Maulana.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 text-[10px] tracking-[0.2em] font-bold hover:bg-white hover:text-black cursor-pointer transition-colors uppercase">
                 View Resume
               </a>
             </div>

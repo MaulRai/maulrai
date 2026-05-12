@@ -19,14 +19,14 @@ const works = [
   {
     id: 3,
     title: 'Vessel',
-    category: 'Web3 • Blockchain',
+    category: 'Web3 • Blockchain • Finance • DeFi',
     image: '/images/vessel.png',
     link: 'https://vessel-vert.vercel.app',
   },
   {
     id: 4,
-    title: 'MyMine TicketKu',
-    category: 'Web3 • Blockchain • NFT',
+    title: 'MyMineTicketKu',
+    category: 'Web3 • Blockchain • NFT • Marketplace',
     image: '/images/mymineticketku.png',
     link: 'https://my-mine-ticket-ku-fe.vercel.app',
   },
@@ -79,16 +79,16 @@ export default function FeaturedWorks() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group block"
             >
-              <div className="relative w-full aspect-video overflow-hidden mb-6 bg-[#111] border border-white/5">
+              <div className="relative w-full aspect-16/8 overflow-hidden mb-6 bg-[#111] border border-white/5">
                 <img 
                   src={work.image} 
                   alt={work.title} 
-                  className="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100"
                 />
               </div>
               <div className="flex justify-between items-start border-t border-white/5 pt-4">
                 <div>
-                  <h3 className="text-xl font-serif tracking-tight mb-2 group-hover:text-white/80 transition-colors uppercase">{work.title}</h3>
+                  <h3 className="text-xl font-serif tracking-tight mb-2 group-hover:text-white/80 transition-colors">{work.title}</h3>
                   <p className="text-white/40 text-[10px] tracking-[0.2em] uppercase">{work.category}</p>
                 </div>
                 <div className="w-8 h-8 border border-white/10 flex items-center justify-center text-white/20 group-hover:border-white/40 group-hover:text-white transition-all">
