@@ -21,8 +21,9 @@ export default function Navbar() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#080808]/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6 border-b border-white/5 md:border-transparent'}`}>
         <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
           <div className="flex flex-col">
-            <span className="text-[10px] tracking-[0.3em] font-medium text-white/40 mb-1 hidden md:block">DEVELOPER</span>
-            <a href="#" className="text-3xl font-serif tracking-tighter uppercase whitespace-nowrap">Maulrai&reg;</a>
+            <a href="#" className="flex items-center">
+              <img src="/MaulRai-logo.svg" alt="MaulRai Logo" className="h-8 md:h-10 w-auto brightness-200" />
+            </a>
           </div>
           
           <nav className="hidden md:flex gap-16 items-center text-[10px] tracking-[0.2em] font-semibold text-white/60">

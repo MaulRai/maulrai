@@ -35,13 +35,13 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 px-6 border-t border-white/5 relative bg-[#080808]">
+    <section id="experience" className="py-20 px-6 border-t border-white/5 relative bg-[#080808]">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-[1px] bg-white/20"></div>
           <span className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Journey</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-serif tracking-tighter mb-20 uppercase">Experience & Leadership</h2>
+        <h2 className="text-4xl md:text-5xl font-serif tracking-tighter mb-12 uppercase">Experience</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((exp, index) => (

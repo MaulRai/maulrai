@@ -27,19 +27,19 @@ const articles = [
 
 export default function Articles() {
   return (
-    <section id="blog" className="py-32 px-6 border-t border-white/5 relative bg-[#080808]">
+    <section id="blog" className="py-20 px-6 border-t border-white/5 relative bg-[#080808]">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-[1px] bg-white/20"></div>
               <span className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Journal</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-serif tracking-tighter">Featured Article&copy;</h2>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter uppercase whitespace-nowrap text-white/90">Writing</h2>
           </div>
           <a href="#" className="inline-flex items-center gap-4 group text-[10px] tracking-[0.2em] font-bold text-white/60 hover:text-white transition-colors uppercase">
             <span>All articles</span>
-            <span className="w-10 h-10 border border-white/10 flex items-center justify-center group-hover:bg-white/5 transition-colors">
+            <span className="w-8 h-8 border border-white/10 flex items-center justify-center group-hover:bg-white/5 transition-colors">
               <ArrowUpRight className="w-4 h-4" />
             </span>
           </a>

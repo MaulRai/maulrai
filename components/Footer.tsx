@@ -44,11 +44,9 @@ export default function Footer() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="w-full text-center"
+            className="w-full flex justify-center mb-12"
           >
-            <h1 className="text-[12vw] leading-none font-serif tracking-tighter uppercase mb-6 text-white/90">
-              Maulrai&reg;
-            </h1>
+            <img src="/MaulRai-logo.svg" alt="MaulRai Logo" className="w-[80vw] h-auto brightness-200" />
           </motion.div>
           
           <div className="w-full h-16 flex flex-col md:flex-row justify-between items-center text-[9px] tracking-[0.3em] font-medium text-white/30 uppercase border-t border-white/5 mt-8 pt-8 md:pt-0">

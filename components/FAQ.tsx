@@ -25,17 +25,17 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-32 px-6 border-t border-white/5 relative bg-[#080808]">
+    <section className="py-20 px-6 border-t border-white/5 relative bg-[#080808]">
       <div className="container mx-auto max-w-4xl">
-        <div className="mb-20 text-center flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="mb-12 text-center flex flex-col items-center">
+          <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-[1px] bg-white/20"></div>
             <span className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Information</span>
             <div className="w-8 h-[1px] bg-white/20"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif tracking-tighter mb-6">FAQ.</h2>
-          <p className="text-white/40 font-light text-sm max-w-md mx-auto">
-            Clarifying Deliverables Before They Begin with Real Process and Honest Answers.
+          <h2 className="text-4xl md:text-5xl font-serif tracking-tighter mb-4">FAQ.</h2>
+          <p className="text-white/40 font-light text-sm max-w-sm mx-auto leading-relaxed">
+            Clarifying details about processes and deliverables.
           </p>
         </div>
 

@@ -17,17 +17,17 @@ const skills = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 px-6 border-t border-white/5 relative bg-[#080808]">
+    <section id="services" className="py-20 px-6 border-t border-white/5 relative bg-[#080808]">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-white/20"></div>
               <span className="text-[10px] tracking-[0.3em] text-white/40 uppercase">Expertise</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-serif tracking-tighter uppercase whitespace-nowrap">Skills & Tech<br/><span className="text-white/30 italic text-2xl md:text-4xl">(Core Stack)</span></h2>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter uppercase whitespace-nowrap">Skills & Tech</h2>
           </div>
-          <p className="max-w-md text-sm text-white/40 font-light leading-relaxed mt-4 md:mt-20">
+          <p className="max-w-md text-sm text-white/40 font-light leading-relaxed mt-4 md:mt-8">
             I architect intelligent systems, from AI-powered search engines to Web3 applications and high-performance mobile apps.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="group border-b border-white/5 py-8 md:py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 cursor-pointer hover:bg-white/5 hover:pl-8 transition-all duration-500"
+              className="group border-b border-white/5 py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 cursor-pointer hover:bg-white/5 hover:pl-8 transition-all duration-500"
             >
               <div className="flex items-center gap-8">
                 <span className="text-white/30 text-[10px] tracking-[0.2em]">{skill.id} {"//"}</span>
