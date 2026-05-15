@@ -86,12 +86,12 @@ export default function Experience() {
                     
                     {/* Logo background with shining effect */}
                     <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
-                      <div className="absolute -right-12 -top-12 w-64 h-64 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
+                      <div className={`absolute ${index % 2 === 1 ? '-right-12' : '-left-12'} -top-12 w-64 h-64 opacity-70 group-hover:opacity-80 transition-opacity duration-300`}>
                         <Image
                           src={exp.logo}
                           alt={exp.company}
                           fill
-                          className="object-cover -rotate-12"
+                          className={`object-cover ${index % 2 === 1 ? '-rotate-12' : 'rotate-12'}`}
                         />
                       </div>
                       {/* Subtle shining overlay effect */}
@@ -99,7 +99,7 @@ export default function Experience() {
                       <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-transparent rounded-lg opacity-50"></div>
                     </div>
                     
-                    <div className="relative p-8 border border-white/10 rounded-lg backdrop-blur-sm hover:border-white/20 transition-all duration-300 bg-[#0a0a0a]/50">
+                    <div className="relative p-8 border border-white/10 rounded-lg backdrop-blur-xs hover:border-white/20 transition-all duration-300 bg-[#0a0a0a]/50">
                       <div className="flex items-center justify-between gap-4 mb-3">
                         <span className="text-[10px] tracking-[0.2em] text-white/40 uppercase font-mono">{exp.year}</span>
                         <motion.div
