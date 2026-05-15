@@ -43,7 +43,49 @@ const works = [
     category: 'Game Dev • Multiplayer',
     image: '/images/pvzetian.png',
     link: 'https://maulrai.itch.io/pvzetian',
-  }
+  },
+  {
+    id: 7,
+    title: 'Tourism Cuy',
+    category: 'AI • Semantic Search • Information Retrieval • Tourism',
+    image: '/images/tourismcuy.png',
+    link: 'https://kg-khong-guan-fe.vercel.app',
+  },
+  {
+    id: 8,
+    title: 'Herlens',
+    category: 'Mobile App • AI Vision • E-Health • Healthcare',
+    image: '/images/herlens.png',
+    link: 'https://www.herlens.id',
+  },
+  {
+    id: 9,
+    title: 'CareerPilot',
+    category: 'Full-Stack • AI • Career Platform • HR Tech',
+    image: '/images/careerpilot.png',
+    link: 'https://careerpilot.my.id',
+  },
+  {
+    id: 10,
+    title: 'ATV FEB UI',
+    category: 'Full-Stack • Event Management • Organization Information System',
+    image: '/images/atv.png',
+    link: 'https://www.atv-febui.com/',
+  },
+  {
+    id: 11,
+    title: 'TIF FEB UI',
+    category: 'Full-Stack • Event Management • Organization Information System',
+    image: '/images/tif.png',
+    link: 'https://tiffebui.com',
+  },
+  {
+  id: 12,
+  title: 'HiringGo',
+  category: 'Full-Stack • HR Tech • Workforce Management',
+  image: '/images/hiringgo.png',
+  link: '#',
+},
 ];
 
 export default function FeaturedWorks() {
@@ -80,9 +122,9 @@ export default function FeaturedWorks() {
               className="group block"
             >
               <div className="relative w-full aspect-16/8 overflow-hidden mb-6 bg-[#111] border border-white/5">
-                <img 
-                  src={work.image} 
-                  alt={work.title} 
+                <img
+                  src={work.image}
+                  alt={work.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100"
                 />
               </div>
