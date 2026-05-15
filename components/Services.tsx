@@ -92,7 +92,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -100,28 +100,29 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
+              className="relative flex items-center gap-6 group"
             >
-              <div className="flex items-center gap-3 mb-4">
+              {/* Category label - sticky */}
+              <div className="flex-shrink-0 flex items-center gap-2 min-w-max">
                 <span className="text-white/30 text-[10px] tracking-[0.2em]">{category.id} {"//"}</span>
-                <h3 className="text-lg md:text-xl font-serif tracking-tight uppercase text-white">{category.title}</h3>
+                <h3 className="text-base md:text-lg font-serif tracking-tight uppercase text-white whitespace-nowrap">{category.title}</h3>
               </div>
 
               {/* Animated carousel container */}
-              <div className="relative overflow-hidden rounded-lg border border-white/5 bg-white/[0.02] backdrop-blur-sm">
+              <div className="relative overflow-hidden flex-1 rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-sm py-3 px-4">
                 {/* Left gradient fade */}
-                <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#080808] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#080808] to-transparent z-10 pointer-events-none rounded-l-full"></div>
                 
                 {/* Right gradient fade */}
-                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#080808] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#080808] to-transparent z-10 pointer-events-none rounded-r-full"></div>
 
                 {/* Carousel wrapper */}
-                <div className="overflow-hidden py-6 px-4">
+                <div className="overflow-hidden">
                   <motion.div
-                    className="flex gap-4 whitespace-nowrap"
-                    animate={{ x: [0, -1000] }}
+                    className="flex gap-3 whitespace-nowrap"
+                    animate={{ x: [0, -(category.items.length * 56 + (category.items.length - 1) * 12)] }}
                     transition={{
-                      duration: 20 + category.items.length,
+                      duration: 20 + category.items.length * 2,
                       repeat: Infinity,
                       ease: 'linear',
                     }}
@@ -130,15 +131,13 @@ export default function Services() {
                     {category.items.map((item, itemIndex) => (
                       <motion.div
                         key={`${category.id}-${itemIndex}`}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="flex-shrink-0 group flex items-center gap-3 px-5 py-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-300 cursor-pointer"
+                        whileHover={{ scale: 1.2 }}
+                        className="flex-shrink-0 group/item relative w-14 h-14 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 transition-colors duration-300 cursor-pointer flex items-center justify-center"
+                        title={item.name}
                       >
-                        <div className="text-white/60 group-hover:text-white transition-colors duration-300">
+                        <div className="text-white/60 group-hover/item:text-white transition-colors duration-300 flex items-center justify-center">
                           {item.icon}
                         </div>
-                        <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors duration-300">
-                          {item.name}
-                        </span>
                       </motion.div>
                     ))}
 
@@ -146,15 +145,13 @@ export default function Services() {
                     {category.items.map((item, itemIndex) => (
                       <motion.div
                         key={`${category.id}-dup-${itemIndex}`}
-                        whileHover={{ scale: 1.1, y: -5 }}
-                        className="flex-shrink-0 group flex items-center gap-3 px-5 py-3 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-300 cursor-pointer"
+                        whileHover={{ scale: 1.2 }}
+                        className="flex-shrink-0 group/item relative w-14 h-14 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 transition-colors duration-300 cursor-pointer flex items-center justify-center"
+                        title={item.name}
                       >
-                        <div className="text-white/60 group-hover:text-white transition-colors duration-300">
+                        <div className="text-white/60 group-hover/item:text-white transition-colors duration-300 flex items-center justify-center">
                           {item.icon}
                         </div>
-                        <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors duration-300">
-                          {item.name}
-                        </span>
                       </motion.div>
                     ))}
                   </motion.div>
