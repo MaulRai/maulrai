@@ -4,10 +4,8 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeaturedWorks from '../components/FeaturedWorks';
 import Skills from '../components/Skills';
-import UserExperience from '../components/Experience';
-import Articles from '../components/Articles';
-import UserFAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import Experience from '../components/Experience';
 
 export default function Page() {
   return (
@@ -17,6 +15,7 @@ export default function Page() {
         <Hero />
         <FeaturedWorks />
         <Skills />
+        <Experience />
       </main>
       <Footer />
     </div>

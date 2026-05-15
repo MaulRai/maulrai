@@ -14,25 +14,52 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['Work', 'Skills', 'Contact'];
+  const links = ['Work', 'Skills', 'Experience', 'Contact'];
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id.toLowerCase());
+    if (element) {
+      const offset = 80; // height of the navbar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#080808]/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6 border-b border-white/5 md:border-transparent'}`}>
         <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
           <div className="flex flex-col">
-            <a href="#" className="flex items-center">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center">
               <img src="/MaulRai-logo.svg" alt="MaulRai Logo" className="h-8 md:h-10 w-auto brightness-200" />
             </a>
           </div>
           
           <nav className="hidden md:flex gap-12 items-center text-[10px] tracking-[0.2em] font-semibold text-white/60">
             {links.slice(0, -1).map((link) => (
-              <a key={link} href={`#${link.toLowerCase()}`} className="hover:text-white transition-colors uppercase">
+              <a 
+                key={link} 
+                href={`#${link.toLowerCase()}`} 
+                onClick={(e) => scrollToSection(e, link)}
+                className="hover:text-white transition-colors uppercase"
+              >
                 {link}
               </a>
             ))}
-            <a href="#contact" className="text-white/30 hover:text-white transition-colors uppercase tracking-[0.2em]">
+            <a 
+              href="#contact" 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="text-white/30 hover:text-white transition-colors uppercase tracking-[0.2em]"
+            >
               [ {links[links.length - 1]} ]
             </a>
           </nav>
@@ -60,7 +87,12 @@ export default function Navbar() {
             
             <nav className="flex flex-col gap-6 text-[10px] tracking-[0.3em] font-semibold uppercase text-white/60">
               {links.map((link) => (
-                <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-white">
+                <a 
+                  key={link} 
+                  href={`#${link.toLowerCase()}`} 
+                  onClick={(e) => scrollToSection(e, link)}
+                  className="hover:text-white"
+                >
                   {link}
                 </a>
               ))}
