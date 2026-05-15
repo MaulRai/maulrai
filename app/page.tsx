@@ -3,7 +3,7 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeaturedWorks from '../components/FeaturedWorks';
-import Services from '../components/Services';
+import Skills from '../components/Skills';
 import UserExperience from '../components/Experience';
 import Articles from '../components/Articles';
 import UserFAQ from '../components/FAQ';
@@ -16,7 +16,7 @@ export default function Page() {
       <main>
         <Hero />
         <FeaturedWorks />
-        <Services />
+        <Skills />
         <UserExperience />
         <Articles />
         <UserFAQ />
