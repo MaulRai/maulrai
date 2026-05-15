@@ -17,9 +17,6 @@ export default function Page() {
         <Hero />
         <FeaturedWorks />
         <Skills />
-        <UserExperience />
-        <Articles />
-        <UserFAQ />
       </main>
       <Footer />
     </div>

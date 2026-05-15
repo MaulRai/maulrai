@@ -11,7 +11,6 @@ import {
   SiGooglecloud, SiEthers, SiWagmi, SiCoinbase, SiTensorflow,
   SiScikitlearn, SiOpencv, SiFirebase, SiGit, SiVercel
 } from 'react-icons/si';
-import { Code2 } from 'lucide-react';
 import { BiCube } from 'react-icons/bi';
 import { GrGraphQl } from 'react-icons/gr';
 import { PiGraph } from 'react-icons/pi';
@@ -87,7 +86,6 @@ const skillCategories = [
       { name: 'Figma', icon: <SiFigma className="w-6 h-6" /> },
       { name: 'Canva', icon: <SiCanva className="w-6 h-6" /> },
       { name: 'Jira', icon: <SiJira className="w-6 h-6" /> },
-      { name: 'Postman', icon: <Code2 className="w-6 h-6" /> },
       { name: 'Git', icon: <SiGit className="w-6 h-6" /> },
       { name: 'Firebase', icon: <SiFirebase className="w-6 h-6" /> },
       { name: 'Vercel', icon: <SiVercel className="w-6 h-6" /> },
