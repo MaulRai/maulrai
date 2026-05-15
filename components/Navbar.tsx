@@ -14,7 +14,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['Work', 'Services', 'Experience', 'FAQ', 'Contact'];
+  const links = ['Work', 'Skills', 'Contact'];
 
   return (
     <>
@@ -26,14 +26,14 @@ export default function Navbar() {
             </a>
           </div>
           
-          <nav className="hidden md:flex gap-16 items-center text-[10px] tracking-[0.2em] font-semibold text-white/60">
-            {links.map((link) => (
+          <nav className="hidden md:flex gap-12 items-center text-[10px] tracking-[0.2em] font-semibold text-white/60">
+            {links.slice(0, -1).map((link) => (
               <a key={link} href={`#${link.toLowerCase()}`} className="hover:text-white transition-colors uppercase">
                 {link}
               </a>
             ))}
-            <a href="#contact" className="text-white/30 hover:text-white transition-colors">
-              [ CONTACT ]
+            <a href="#contact" className="text-white/30 hover:text-white transition-colors uppercase tracking-[0.2em]">
+              [ {links[links.length - 1]} ]
             </a>
           </nav>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-[#080808] flex flex-col pt-6 px-6 border-b border-white/5"
           >
             <div className="flex justify-between items-center mb-12">
-              <span className="text-3xl font-serif tracking-tighter uppercase whitespace-nowrap">Maulrai&reg;</span>
+              <img src="/MaulRai-logo.svg" alt="MaulRai Logo" className="h-8 w-auto brightness-200" />
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-white/60 hover:text-white">
                 <X className="w-6 h-6" />
               </button>
@@ -64,9 +64,6 @@ export default function Navbar() {
                   {link}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white/30 hover:text-white mt-4">
-                [ CONTACT ]
-              </a>
             </nav>
           </motion.div>
         )}
