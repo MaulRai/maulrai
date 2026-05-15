@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import Image from 'next/image';
 
 const experiences = [
   {
@@ -7,6 +8,7 @@ const experiences = [
     company: "Herlens",
     description: "Spearheaded UI development using Flutter for 5 key modules, resolving bugs and improving stability by 50%. Integrated frontend interfaces with backend APIs.",
     year: "2025",
+    logo: "/images/logo/herlens.png",
   },
   {
     id: 2,
@@ -14,6 +16,7 @@ const experiences = [
     company: "Ristek Fasilkom UI",
     description: "Awarded Best Tutor 2025. Tutored 10+ core CS subjects, delivering sessions and curating supplementary materials.",
     year: "2025",
+    logo: "/images/logo/ristek.png",
   },
   {
     id: 3,
@@ -21,6 +24,7 @@ const experiences = [
     company: "COMPFEST",
     description: "Directed creative operations for a large-scale national tech event. Standardized visual identity across digital and physical platforms.",
     year: "2024",
+    logo: "/images/logo/compfest.png",
   },
   {
     id: 4,
@@ -28,6 +32,7 @@ const experiences = [
     company: "BEM Fasilkom UI",
     description: "Produced 30+ high-quality visual assets and social media content while maintaining brand consistency.",
     year: "2023",
+    logo: "/images/logo/bem.png",
   },
   {
     id: 5,
@@ -35,6 +40,7 @@ const experiences = [
     company: "SIX IT SMAN 6 BEKASI",
     description: "Managed 12+ programs including workshops and events. Acted as a liaison between the club and external organizations.",
     year: "2022",
+    logo: "/images/logo/sixit.png",
   }
 ];
 
@@ -77,6 +83,21 @@ export default function Experience() {
                   >
                     {/* Card background with gradient border effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    {/* Logo background with shining effect */}
+                    <div className="absolute inset-0 rounded-lg overflow-hidden pointer-events-none">
+                      <div className="absolute -right-12 -top-12 w-64 h-64 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
+                        <Image
+                          src={exp.logo}
+                          alt={exp.company}
+                          fill
+                          className="object-cover -rotate-12"
+                        />
+                      </div>
+                      {/* Subtle shining overlay effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-transparent to-white/5 rounded-lg"></div>
+                      <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-transparent rounded-lg opacity-50"></div>
+                    </div>
                     
                     <div className="relative p-8 border border-white/10 rounded-lg backdrop-blur-sm hover:border-white/20 transition-all duration-300 bg-[#0a0a0a]/50">
                       <div className="flex items-center justify-between gap-4 mb-3">
